@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>review_bozza_tesi_cerioli</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">Review — <em>The Shape of Complexity: topology, random walks, and statistical methods on networks</em></h1>
+
+<p><strong>Candidate:</strong> Gabriele Cerioli · Bachelor&#39;s thesis in Physics
+<strong>Draft reviewed:</strong> <code>bozza_tesi_cerioli.pdf</code> (53 pp.)
+<strong>Date:</strong> 2026-08-26
+<strong>Scope of review:</strong> the text was read in full and checked for internal consistency, correctness of the derivations, and consistency between text, figures and tables. Judged as a <em>review/benchmark</em> thesis, not as a research manuscript.</p>
+
+<hr>
+
+<h2 id="toc_1">0. Overall assessment</h2>
+
+<p>The draft is in good shape. The theoretical chapters (2–4) are well organised, the analytical thread (adjacency → Laplacian → random walk → diffusion → percolation → Ising → cavity/non-backtracking) is coherent, and <strong>I re-derived essentially every equation in Chapters 2–4 and Appendix A and they are correct</strong>: the master equation and its Laplacian form (43), detailed balance and the stationary distribution (44)–(46), the MFPT recursion (51), the similarity transform (57), the commute-time/resistance identity (63), the Dirichlet-energy gradient flow (64)–(65), Molloy–Reed (87), the DGM mean-field temperature (102) and its derivation in A.8, the Bethe–Peierls temperature (103) and its full derivation in A.7, the non-backtracking bifurcation (110)–(113), and the reduction of (113) to (103) for <em>k</em>-regular graphs. That is a solid basis.</p>
+
+<p>The problems are concentrated in <strong>Chapter 5 (the numerical benchmark)</strong> and in <strong>text–figure consistency</strong>. There is one methodological error there that I would consider blocking (§2.1), one physical mislabelling that runs through the whole chapter (§2.2), and a headline conclusion that the thesis&#39; own table contradicts (§2.3). Everything else is fixable in a revision pass.</p>
+
+<hr>
+
+<h2 id="toc_2">1. Structural / editorial</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1.1</td>
+<td><strong>There is no abstract.</strong> A bachelor thesis normally opens with one (½ page).</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td><strong>The &quot;Structure and scope of the thesis&quot; box (p. 4) describes only three levels — Chapters 2, 3, 4.</strong> Chapter 5, which is ~10 pages and the only part containing original work, is never announced. The roadmap has clearly not been updated since Chapter 5 was written.</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td><strong>Promised content never delivered — von Neumann entropy.</strong> §3.3 opens with: <em>&quot;we quantify … the quantum-like von Neumann entropy of the network density matrix [PS08]&quot;</em>. It is never defined or used anywhere; [PS08] is cited only in that sentence. Either write the (short) subsection or delete the promise.</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td><strong>Promised content never delivered — spectral clustering.</strong> §2.5 says the eigenvalues λ₃…λ_k <em>&quot;lay the foundation for the spectral clustering method (which will be discussed in Chapter 3, see Figure 9)&quot;</em>. Figure 9 is a diffusion-bottleneck simulation; spectral clustering is never discussed. Same in §4.3&#39;s forward pointers.</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td><strong>Broken cross-reference.</strong> §2.6 (betweenness) refers to <em>&quot;the spectral bottlenecks identified by Cheeger&#39;s inequality in Section 3.2&quot;</em> — Cheeger&#39;s inequality is Eq. (20)–(21) in §2.5, not §3.2.</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td><strong>Register.</strong> The prose leans very heavily on superlatives — <em>infinitely robust, absolute resistance, indestructible, instantly, catastrophic, spectacular, perfectly, exactly, most beautiful and profound</em>. In a physics thesis this reads as overclaiming, and in several places it <em>is</em> overclaiming (see 3.4, 4.6). A pass removing ~80% of the intensifiers would improve credibility at zero cost to content.</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td><strong>Figure 1 (climate, connectome, flock, Internet) carries no source attribution.</strong> For a submitted thesis, images taken from elsewhere need credits/licences.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_3">2. Substantive errors — should be fixed before submission</h2>
+
+<h3 id="toc_4">2.1 The Bethe–Peierls column of Tables (121) and (122) uses the wrong formula for heterogeneous networks</h3>
+
+<p>This is the most serious issue, because §4.3 derives the <em>correct</em> result and then Chapter 5 does not use it.</p>
+
+<p>Both benchmark tables label the column <strong>&quot;T_c^BP (Eq. 103)&quot;</strong>, i.e. the <em>k</em>-regular formula <code>k_BT_c = 2J/ln[k/(k−2)]</code>, evaluated with <code>k = ⟨k⟩</code>. Reverse-engineering the numbers confirms this:</p>
+
+<ul>
+<li>2D RGG, ⟨k⟩ = 5.2 → 2/ln(5.2/3.2) = <strong>4.12</strong> ✓ matches the reported 4.13</li>
+<li>BA, ⟨k⟩ = 6.0 → 2/ln(6/4) = <strong>4.93</strong> ✓ matches the reported 4.90</li>
+</ul>
+
+<p>But Eq. (103) is valid <strong>only for a regular tree</strong>. For a heterogeneous network the thesis&#39; own Eq. (111)/(113) applies, with <code>ρ(B) = (⟨k²⟩−⟨k⟩)/⟨k⟩</code>. Using the ⟨k²⟩ implied by the thesis&#39; own mean-field column (<code>T_c^MF = ⟨k²⟩/⟨k⟩</code>):</p>
+
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>⟨k⟩</th>
+<th>⟨k²⟩ (from T_c^MF)</th>
+<th>T_c^BP reported</th>
+<th>T_c^BP from Eq. (113)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>2D RGG</td>
+<td>5.2</td>
+<td>32.0</td>
+<td>4.13</td>
+<td><strong>≈ 5.1</strong></td>
+</tr>
+<tr>
+<td>Barabási–Albert</td>
+<td>6.0</td>
+<td>83.0</td>
+<td>4.90</td>
+<td><strong>≈ 12.8</strong></td>
+</tr>
+<tr>
+<td>a-Si</td>
+<td>4.0</td>
+<td>16.0</td>
+<td>2.89</td>
+<td>2.90 ✓ (near-regular, fine)</td>
+</tr>
+<tr>
+<td>MAC</td>
+<td>3.0</td>
+<td>9.0</td>
+<td>1.82</td>
+<td>1.82 ✓</td>
+</tr>
+</tbody>
+</table>
+
+<p>For the BA network the reported value is <strong>off by a factor ~2.6</strong>, and it inverts the qualitative message: as printed, Table (122) shows Bethe–Peierls (4.90) <em>below</em> mean field (13.84) and below the simulated T_c (&gt;6.5) — which is then read as &quot;BP fails on scale-free networks&quot;. With the correct ρ(B) the BP estimate is 12.8, i.e. <em>close to</em> mean field, which is the physically expected result for a locally tree-like heterogeneous graph and is exactly what §4.3 predicts. <strong>Recompute the BP column with ρ(B)</strong> (numerically from the Hashimoto matrix if you want to capture the degree correlations of the RGG/a-Si samples, which would also be worth stating), and relabel the column.</p>
+
+<h3 id="toc_5">2.2 &quot;Topological frustration&quot; in a purely ferromagnetic model</h3>
+
+<p>Chapter 5 defines <code>F_i = N_odd(i)/N_tot(i)</code> (Eq. 120) and calls it the <strong>local topological frustration index</strong>, then interprets every result through it (&quot;frustration suppresses T_c&quot;, &quot;Bipartite (No Frustration)&quot;, &quot;geometric frustration&quot; for pyrochlore, &quot;tetrahedral loop echoes&quot;).</p>
+
+<p>All Chapter-5 simulations use <strong>J = +1, h = 0</strong> (Eq. 119). A ferromagnet on <em>any</em> graph has <strong>no frustration</strong>: the all-aligned state minimises every bond energy simultaneously, odd rings included. Frustration requires antiferromagnetic or mixed-sign couplings — which the thesis itself states correctly in §2.7 (&quot;<em>if the interactions are antiferromagnetic, cliques generate extreme geometric frustration</em>&quot;). So Chapter 5 contradicts Chapter 2 and uses a term that cannot apply.</p>
+
+<p>The <em>measurement</em> is fine and the trend is real; only the name and the mechanism are wrong. Two options:
+- rename <code>F_i</code> to something neutral — <strong>odd-ring fraction</strong>, or <strong>short-loop / non-bipartiteness index</strong> — and drop &quot;frustration&quot;, &quot;echoes&quot;, &quot;disclination&quot; as explanatory mechanisms; or
+- state explicitly that <code>F_i</code> is being used as a <em>proxy for local loop structure</em> (which controls the failure of the tree approximation), not as frustration in the spin-glass sense.</p>
+
+<p>The second is closer to what you actually show, since the physical content is &quot;short loops break the Bethe approximation&quot;, not &quot;frustration lowers T_c&quot;.</p>
+
+<h3 id="toc_6">2.3 The headline claim of Table (121) is contradicted by Table (121)</h3>
+
+<p>Under the 2D benchmark table: <em>&quot;Topological frustration ⟨F⟩ systematically suppresses the ferromagnetic transition temperature relative to Mean-Field and tree-like approximations.&quot;</em></p>
+
+<p>The table&#39;s own numbers:</p>
+
+<table>
+<thead>
+<tr>
+<th>Topology</th>
+<th>⟨F⟩</th>
+<th>T_c^sim</th>
+<th>⟨k⟩</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Square</td>
+<td>0.00</td>
+<td>2.35</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Kagomé</td>
+<td>0.50</td>
+<td>2.20</td>
+<td>4</td>
+</tr>
+<tr>
+<td>MAC</td>
+<td>0.55</td>
+<td>1.54</td>
+<td>3</td>
+</tr>
+<tr>
+<td>RGG</td>
+<td><strong>0.80</strong></td>
+<td><strong>2.43</strong></td>
+<td><strong>5.2</strong></td>
+</tr>
+</tbody>
+</table>
+
+<p>The RGG has the <em>highest</em> ⟨F⟩ and the <em>highest</em> T<em>c^sim. There is no monotonic relation. What the data actually show is that T</em>c is dominated by ⟨k⟩ — and ⟨k⟩ is not held fixed across the four systems, so the comparison is confounded. The only clean, defensible comparison in the table is <strong>Square vs Kagomé</strong> (both z = 4, 2.27 vs 2.14), and in 3D <strong>Simple Cubic vs Pyrochlore</strong> (both z = 6). Restrict the claim to the equal-coordination pairs, or add a T<em>c/⟨k⟩ (or T</em>c/T_c^MF) column so the degree effect is normalised out.</p>
+
+<p>Related: the benchmark systems are introduced (p. 35) as &quot;<em>four representative two-dimensional topologies with comparable mean coordination (⟨k⟩ ≈ 3–4)</em>&quot;, but the RGG has ⟨k⟩ ≈ 5.2 (p. 38). Fix one or the other.</p>
+
+<h3 id="toc_7">2.4 Molloy–Reed is invoked where it does not apply and does not agree</h3>
+
+<p>Twice (p. 42 and Conclusions §6.2 point 2): <em>&quot;In agreement with the Molloy-Reed criterion (Eq. 87), since both networks share ⟨k⟩ ≈ 3.0 and ⟨k²⟩ ≈ 9.0…&quot;</em> — and in the Conclusions this becomes &quot;<strong>validating</strong> the Molloy-Reed criterion&quot;.</p>
+
+<p>With ⟨k⟩ = 3, ⟨k²⟩ = 9, Eq. (87) gives <code>p_c = 3/(9−3) = 0.5</code>. The measured thresholds are <strong>0.653 (bond)</strong> and <strong>0.697 (site)</strong>. Molloy–Reed is a tree-like/uncorrelated result; graphene and MAC are planar, loopy, spatially embedded — precisely the regime where it fails, by ~30–40% here. Nothing is being validated.</p>
+
+<p>The correct statement is the <em>qualitative</em> one you actually demonstrate: p_c is set by the coordination number and is insensitive to the presence of 5–7 rings, i.e. amorphisation at fixed ⟨k⟩ does not change the threshold. Keep that, cite the honeycomb thresholds properly (Sykes–Essam for <code>1−2sin(π/18)</code>), and either drop Molloy–Reed or use it explicitly as a <em>counter</em>-example showing where the tree approximation breaks.</p>
+
+<h3 id="toc_8">2.5 Text contradicts its own figure on the MAC targeted attack</h3>
+
+<p>Text (p. 42) and Conclusions §6.2 point 2: <em>&quot;removing only f ≈ 0.05 of the top-betweenness atoms instantly destroys 50% of the macroscopic cluster (P∞ → 0.5)&quot;</em>.</p>
+
+<p>Fig. 22(d): the red targeted-attack curve does drop to ≈ 0.5 at f ≈ 0.05 ✓ — <strong>but the snapshot strip underneath the same panel is labelled <code>f = 5%, P∞ = 0.95</code></strong>, and the caption says the snapshots are from the targeted attack. The graphene snapshots in panel (c) <em>are</em> consistent with their red curve (f = 8% → 0.74 ✓, f = 18% → 0.08 ✓); the MAC ones match neither the red nor the green curve. Regenerate the MAC snapshot labels (or the snapshots) — as it stands, a reader checking the figure will conclude the headline number is wrong.</p>
+
+<h3 id="toc_9">2.6 Eq. (72) — the &quot;exact duality&quot; is not exact on a general graph</h3>
+
+<blockquote>
+<p><code>(H_t)_ij = Σ_s (tλ)^s e^{−tλ}/s! · p_ij^(s)</code> — <em>&quot;the macroscopic heat kernel is precisely the Poisson average of the discrete random walk&quot;</em></p>
+</blockquote>
+
+<p>Poisson subordination requires the generator to have the form <code>L = λ(I − M)</code>. With <code>L = D − A</code> and <code>M = D^{−1}A</code>, <code>L = D(I − M)</code>, so <code>L = λ(I − M)</code> <strong>only when D = λI, i.e. only on a k-regular graph</strong>. On a heterogeneous graph — the whole subject of the thesis — <code>e^{−Lt}</code> is <em>not</em> the Poisson average of <code>M^s</code>. Also, <code>λ</code> is never defined in Eq. (72), and it collides with the eigenvalue symbol used everywhere else.</p>
+
+<p>Fix: either restrict the statement to <em>k</em>-regular graphs, or state it for the normalised Laplacian <code>L_rw = I − M</code> (where it is exact and standard), and say so.</p>
+
+<h3 id="toc_10">2.7 The Cayley tree ≠ Bethe lattice slip (§4.3)</h3>
+
+<blockquote>
+<p><em>&quot;In the thermodynamic limit N → ∞, the number of leaves (boundary nodes) tends to zero, and the graph can be considered infinite and regular.&quot;</em></p>
+</blockquote>
+
+<p>This is false, and it is the classic trap. On a <em>k</em>-Cayley tree the boundary fraction tends to <strong>(k−2)/(k−1)</strong>, a finite fraction — 2/3 for k = 3. That is exactly why the Cayley tree and the Bethe lattice are <em>not</em> thermodynamically equivalent, and why the Bethe–Peierls result must be understood as the deep-bulk / locally-tree-like result rather than as &quot;the exact solution of the Cayley tree&quot;. Rewrite as: <em>&quot;the boundary retains a finite weight, so the Bethe–Peierls solution describes the bulk of a locally tree-like graph (e.g. a random regular graph), not the Cayley tree&#39;s thermodynamics.&quot;</em> Your own Fig. 15 middle panel (random regular graph, where BP works perfectly) makes exactly this point.</p>
+
+<h3 id="toc_11">2.8 Proof A.4 is invalid for bipartite graphs</h3>
+
+<p>The step <em>&quot;Since |λ_k| &lt; ρ for all k ≥ 2…&quot;</em> fails precisely for <strong>connected bipartite</strong> graphs, where <code>−ρ</code> is also an eigenvalue. Since the square and simple-cubic lattices — bipartite, and central to Chapter 5 — are the main examples, this is worth fixing. The conclusion <code>h(G) = ln ρ(A)</code> still holds; you need irreducible + <strong>aperiodic (primitive)</strong> for the argument as written, or a one-line remark handling the periodic case. Also Eq. (141) assumes A is diagonalisable, and Eq. (142) should read <code>W_n ∼ Cρⁿ</code>, not <code>lim W_n = Cρⁿ</code>.</p>
+
+<h3 id="toc_12">2.9 &quot;Non-bipartite&quot; is an unnecessary hypothesis for uniqueness</h3>
+
+<p>The box &quot;Uniqueness of the stationary distribution&quot; (§3.1) and Theorem A.2 both assume *&quot;connected, <strong>non-bipartite</strong>&quot;*. The proof in A.2 never uses non-bipartiteness — and correctly so: the stationary distribution is unique for any connected undirected graph. Non-bipartiteness (aperiodicity) is needed for <strong>convergence</strong>, not uniqueness — which the very next paragraph then explains via the lazy walk. Drop the hypothesis from the theorem, and keep the aperiodicity discussion where it is. Same remark for the Kac&#39;s-lemma box.</p>
+
+<hr>
+
+<h2 id="toc_13">3. Numerical / quantitative inconsistencies (Chapter 5 and around)</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Where</th>
+<th>Issue</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>3.1</td>
+<td>p. 28</td>
+<td><em>&quot;an effective non-zero critical threshold p_c ∼ 1/ln N ≈ 0.08&quot;</em>. 1/ln(10⁴) = <strong>0.109</strong>, not 0.08. (0.08 <em>is</em> the right answer via <code>p_c = ⟨k⟩/(⟨k²⟩−⟨k⟩)</code> with ⟨k²⟩ ≈ 55 for BA at N = 10⁴ — so give that calculation instead of the <code>1/ln N</code> shortcut.) Also, Fig. 12&#39;s caption states &quot;<em>no finite critical threshold (p_c → 0)</em>&quot; while the paragraph immediately after reports p_c ≈ 0.08 for the same simulation; reconcile.</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>p. 35–36</td>
+<td><strong>The square lattice is described as being &quot;on a torus&quot;, but the reported λ₂ says otherwise.</strong> For a 25×25 periodic grid, λ₂ = 2(1−cos 2π/25) = <strong>0.0629</strong>. The thesis reports λ₂ = 0.0158, which is exactly 2(1−cos π/25) — i.e. <strong>open boundary conditions</strong>. Same in 3D: λ₂ = 0.1522 = 2(1−cos π/8) → an 8×8×8 = 512-node open cube, not the &quot;N ≈ 600–1000&quot; stated. State the boundary conditions used, and correct N. (This matters: open BCs also mean the &quot;exact&quot; Onsager/3D T_c comparisons carry a boundary-induced downward shift.)</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>p. 39</td>
+<td>*&quot;Euclidean topologies relax with characteristic times τ<em>rel = 1/(2λ₂) <strong>scaling as N^{−2/3}</strong>&quot;*. Backwards: λ₂ ∼ N^{−2/3} in 3D, so **τ</em>rel ∼ N^{+2/3}** — relaxation gets <em>slower</em> with size. The Conclusions (§6.1 point 2) state it correctly as λ₂ ∼ N^{−2/d}; §5.4 does not. Also, N is never varied, so no scaling is actually demonstrated — either run 2–3 sizes or phrase it as an expectation.</td>
+</tr>
+<tr>
+<td>3.4</td>
+<td>p. 40, §6.2</td>
+<td><strong>Two percentage errors computed with different denominators.</strong> 2D: (2.89−2.27)/<strong>2.27</strong> = 27%. 3D: (4.93−4.51)/<strong>4.93</strong> = 8.5%. Consistently normalised by the exact value, 3D gives 9.3%; normalised by BP, 2D gives 21.5%. The &quot;27% → 8.5%&quot; improvement is therefore partly an artefact of the convention. Pick one and recompute both.</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>p. 40</td>
+<td><em>&quot;tetrahedral loop echoes in Pyrochlore lower T_c by ∼15% relative to the unfrustrated Simple Cubic&quot;</em>. −15% is exact-vs-exact (3.80 vs 4.51); the <em>simulated</em> values give 4.20 vs 4.50 = <strong>−6.7%</strong>. Say which pair you mean. Relatedly, the pyrochlore T<em>c ≈ 3.80 sits in the **&quot;T</em>c^exact&quot;** column of Table (122) — there is <strong>no exact solution</strong> for the 3D pyrochlore Ising model. It is a Monte-Carlo literature value and needs a citation and a relabelled column (e.g. &quot;reference value&quot;).</td>
+</tr>
+<tr>
+<td>3.6</td>
+<td>Table (122)</td>
+<td>BA row: <strong>&quot;T_c^exact = ∞&quot;</strong>. The simulated network is finite (N ≈ 1000), where T_c ≈ 13.8 by your own mean-field column. <code>∞</code> is a thermodynamic-limit statement placed in a column of values for finite simulated systems. Write <code>→ ∞ (N → ∞)</code> in a footnote, not as a table entry.</td>
+</tr>
+<tr>
+<td>3.7</td>
+<td>p. 40, §6.2</td>
+<td>*&quot;The BA network retains finite magnetization (⟨|m|⟩ ≈ 0.35 at T = 6.5) without a susceptibility peak, <strong>confirming</strong> the infinite critical temperature.&quot;* It confirms <code>T_c &gt; 6.5</code>, nothing more — and the expected finite-N value is ≈ 13.8, which is simply outside the plotted range [1, 6]. Extend the temperature range to ~15 (cheap) and the claim becomes a real, quantitative test of DGM. As it stands the figure cannot show what the caption says. Same for Fig. 15&#39;s right panel (N = 400, range 1–6).</td>
+</tr>
+<tr>
+<td>3.8</td>
+<td>Fig. 24</td>
+<td><strong>µ = 1.48 ± 0.07 is called &quot;the universal critical transport exponent&quot;</strong> (§6.1 point 4). One system size, one realisation set, no finite-size scaling, p<em>c read off a finite-system susceptibility peak (which is biased), and a fit over well under a decade in (p−p</em>c) — with the fitted exponent highly sensitive to the assumed p<em>c, whose uncertainty is not propagated. Also, µ(λ₂) = 1.48 and µ(flux) = 0.96 are two different exponents for two different observables, yet the Conclusions quote only 1.48 as &quot;the&quot; transport exponent. Downgrade to &quot;an effective exponent µ ≈ 1.5 for this system size&quot;, drop &quot;universal&quot;, and compare with the known 3D conductivity exponent t ≈ 2.0 for random resistor networks. Likewise, p</em>c ≈ 0.53 for site percolation on a-Si is never compared with the diamond-lattice literature value (0.43) — a one-line comparison would strengthen the section considerably.</td>
+</tr>
+<tr>
+<td>3.9</td>
+<td>Fig. 16 vs Fig. 19</td>
+<td>The 2D benchmark measures <strong>&quot;shortest ring&quot; per node</strong>; the 3D benchmark measures <strong>&quot;chordless rings&quot;</strong>. These are different quantities and the 2D and 3D distributions are therefore not comparable — yet they are presented in parallel and compared in the Conclusions. Use one definition throughout, or state the difference explicitly.</td>
+</tr>
+<tr>
+<td>3.10</td>
+<td>Fig. 19(a) / Fig. 21(a)</td>
+<td>Panel header reads <em>&quot;3D Simple Cubic Lattice, z = 6, Bravais (</em><em>100% 4-rings</em><em>)&quot;</em> while the plotted distribution in the same figure is <strong>P(4) = 0.50, P(6) = 0.50</strong>. Direct contradiction inside one figure (a leftover from the 2D version of the panel).</td>
+</tr>
+<tr>
+<td>3.11</td>
+<td>p. 36 vs Fig. 16</td>
+<td>Text: *&quot;P(7) ≈ <strong>18.7%</strong>&quot;* for MAC; figure: <strong>18.5%</strong>. Trivial, but they should match.</td>
+</tr>
+<tr>
+<td>3.12</td>
+<td>Fig. 14 vs Fig. 18</td>
+<td>The 2D square Ising transition is simulated twice (N = 1600 and N = 900) with inconsistent conclusions: Fig. 14 says the transition occurs <em>&quot;exactly at Onsager&#39;s critical temperature&quot;</em>, Fig. 18 reports a peak at T_c^sim ≈ 2.35 (+3.5%). Either merge the two, or keep both and explain the shift as the expected finite-size displacement of the susceptibility maximum (and say so — it is a good opportunity to mention finite-size scaling, for which [Bin81] is already cited).</td>
+</tr>
+<tr>
+<td>3.13</td>
+<td>Chapter 5 throughout</td>
+<td><strong>No simulation protocol is given anywhere</strong>: number of MC sweeps, equilibration/burn-in, measurement interval, number of independent runs per temperature, random seeds, software. For 2D RGG and MAC even the sample construction (r_c, box size, periodicity) is only partly stated. Add a short &quot;Numerical methods&quot; subsection at the start of Chapter 5 — this is the single cheapest way to raise the chapter&#39;s credibility, and an examiner will ask.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_14">4. Figures and captions</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>4.1</td>
+<td><strong>Fig. 5 caption is incomplete.</strong> With edges {1-2, 1-3, 2-3, 3-4, 3-5}, node 3 has neighbours {1,2,4,5}, so there are <strong>five</strong> open triples centred on 3: (1,3,4), (1,3,5), (2,3,4), (2,3,5), (4,3,5). The caption lists only three, omitting (1,3,5) and (4,3,5). Since the example immediately precedes the definition of C_i, an incomplete count is actively confusing.</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td><strong>Fig. 6 — the power-law fits are not defensible, and the caption is &quot;Examples&quot;.</strong> (a) The fitted exponents are <strong>γ = 1.50</strong> (GR-QC) and <strong>γ = 1.16</strong> (Wikipedia vote). Both are &lt; 2, which means a divergent mean degree — impossible for networks whose measured ⟨k⟩ you print in the same panel (5.5 and 28.3). (b) The fit is visibly a log-log linear regression over the <em>whole</em> range starting at k = 1, with no k<em>min, no MLE, no goodness-of-fit; in both log-log panels the data fall far below the fitted line in the tail. This is exactly the failure mode Clauset–Shalizi–Newman warn about, and it directly contradicts the thesis&#39; own later statement that real networks have 2 &lt; γ ≤ 3. Redo with MLE + k</em>min selection (<code>powerlaw</code> package), report k_min and a KS statistic, or — perfectly acceptable for a review thesis — replace the fit with a plain log-binned distribution and no exponent. (c) Give the figure a real caption. (d) Neither dataset is cited; the GR-QC network is attributed to &quot;Newman 2004&quot; but the standard source is the SNAP <code>ca-GrQc</code> set (Leskovec et al.). (e) The Wikipedia vote network is directed — say how it was symmetrised. (f) The linear-scale panels convey nothing; consider dropping them.</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Fig. 12/13/15/21: legends and dashed reference lines lie outside the plotted range in several panels (BP/MF T_c for BA). See 3.7.</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>Several captions state conclusions the panel does not show (&quot;perfectly predicts&quot;, &quot;confirming&quot;, &quot;exact synchronization&quot;). Captions should describe; conclusions belong in the text.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_15">5. Terminology and notation</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>5.1</td>
+<td><strong><code>γ</code> carries three different meanings</strong>: degree-distribution exponent (Eq. 30), percolation susceptibility exponent (Eq. 86) — <em>in the same section</em> — and spectral gap (Eq. 60). Rename at least two of them (e.g. spectral gap → <code>g</code> or <code>Δ</code>).</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td><strong><code>H</code> carries three meanings</strong>: Shannon entropy H(X), mean first-passage time H(i,j), heat kernel H_t — plus the Hamiltonian H(σ). Four, actually.</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td><strong><code>λ</code> and <code>k</code></strong>: <code>λ(G)</code> is edge connectivity (Eq. 19) while <code>λ_i</code> are eigenvalues; <code>k(G)</code> is node connectivity while <code>k_i</code> is degree. Use <code>κ(G)</code> and <code>λ_e(G)</code>, as is standard.</td>
+</tr>
+<tr>
+<td>5.4</td>
+<td><strong>Walk vs. path.</strong> Eqs. (12)–(14) call <code>[A^r]_ij</code> &quot;the number of <strong>paths</strong> of length r&quot; and <code>Tr(A^r)</code> &quot;the total number of <strong>cycles</strong> of length r&quot;. Both count <strong>walks</strong> (repeated nodes allowed, including backtracking i→j→i), and Tr(A^r) overcounts each genuine cycle by 2r for undirected graphs. Since §4.3 later builds an entire subsection on precisely the difference between backtracking and non-backtracking walks, getting this right in Chapter 2 matters. Eq. (76) has the same issue (&quot;admissible paths&quot; → walks).</td>
+</tr>
+<tr>
+<td>5.5</td>
+<td><strong>Entropy units are inconsistent</strong>: Eqs. (73)–(75) use log₂ (bits), Eqs. (77)–(82) use ln (nats). h_walk and h(G) are never directly compared, but a reader will try. Pick one base.</td>
+</tr>
+<tr>
+<td>5.6</td>
+<td>Eq. (26): the sum condition <code>j ≠ k ≠ i</code> does not exclude <code>j = i</code>; and betweenness is usually normalised and summed over unordered pairs. State the convention.</td>
+</tr>
+<tr>
+<td>5.7</td>
+<td>Eq. (24)/(25): PageRank needs <code>0 &lt; α &lt; 1</code> for <code>(I − αW)</code> to be invertible; the text only says <code>α, β &gt; 0</code>. Also the standard choice <code>β = (1−α)/n</code> is worth stating.</td>
+</tr>
+<tr>
+<td>5.8</td>
+<td>§2.5: *&quot;the uniform <strong>unit</strong> vector (1,1,…)&quot;* — that vector is not a unit vector. Trivial, but it is a definition box.</td>
+</tr>
+<tr>
+<td>5.9</td>
+<td>§2.3: <code>⟨d⟩</code> is called <em>&quot;typical correlation length&quot;</em>. It is a mean geodesic distance; correlation length is a different object (and, on networks, genuinely subtle). Drop the parenthetical.</td>
+</tr>
+<tr>
+<td>5.10</td>
+<td>Eq. (43) vs Eq. (65): two different processes are both called &quot;diffusion&quot; — <code>dp/dt = −LD⁻¹p</code> (random walk, stationary state <code>k_i/2m</code>) and <code>df/dt = −Lf</code> (heat, stationary state uniform). The thesis never points out that they have <em>different</em> equilibria, which is one of the most instructive facts in this whole area. A two-line remark would add real value.</td>
+</tr>
+<tr>
+<td>5.11</td>
+<td>Eq. (59)/(60): the ordering is written <code>1 = λ₁ &gt; \|λ₂\| ≥ …</code> but the spectral gap is then defined as <code>γ = 1 − λ₂</code> rather than <code>1 − \|λ₂\|</code>. Inconsistent (and the distinction is exactly the bipartite case discussed two paragraphs earlier).</td>
+</tr>
+<tr>
+<td>5.12</td>
+<td>Table 1: &quot;Regular lattice, ⟨d⟩ = O(n)&quot; — true for a 1D ring only; the text one page earlier correctly says N^{1/d}. Also ER&#39;s <code>C = p</code> is better written <code>O(1/n)</code> to make the → 0 explicit, and &quot;Hub: rare&quot; for Watts–Strogatz is generous — WS has no hubs at all (its degree distribution is narrower than Poisson).</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_16">6. Historical / bibliographic</h2>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>6.1</td>
+<td>§1.1: <em>&quot;models proposed by Van der Waals and later Ernst Ising demonstrated … spontaneous symmetry breaking and phase transitions.&quot;</em> <strong>Ising demonstrated the opposite.</strong> The 1925 paper solves the 1D chain, finds <em>no</em> transition, and Ising incorrectly generalised that to higher dimensions. The transition was established by Peierls (1936) and solved by Onsager (1944). As written this is a factual error in the opening page.</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>§1.1: *&quot;In 1998, Watts and Strogatz <strong>discovered</strong> the small-world phenomenon in natural networks.&quot;* The phenomenon is Milgram (1967); WS introduced the <em>model</em> that reconciles short paths with high clustering.</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>§1.2: <em>&quot;a complex system is typically one where the Mean-Field approximation fails.&quot;</em> By that definition the 2D square-lattice Ising model is a complex system — and Chapter 5 spends a figure showing MF failing on exactly that lattice. The definition undercuts the thesis&#39; own framing. Either qualify it (heterogeneity + fluctuations + no characteristic scale) or drop it.</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td><strong>Missing citations for results actually used</strong>: Shannon (1948) for Eq. (73) — [Jay57] is Jaynes on maximum entropy, not the definition of Shannon entropy; Metropolis et al. (1953) and Hastings (1970) for the algorithm (currently only [Bin81]); Erdős–Rényi (1959/60) for G(N,p); Kac for Kac&#39;s lemma; Cohen–Erez–ben-Avraham–Havlin (2000) for <code>p_c → 0</code> on scale-free networks (§4.1 attributes it implicitly to Molloy–Reed); Sykes–Essam for the honeycomb thresholds; the 3D Ising T<em>c ≈ 4.5115 (Ferrenberg et al.); the exact kagomé T</em>c ≈ 2.1433; the pyrochlore MC T_c ≈ 3.8; Clauset–Shalizi–Newman for power-law fitting (see 4.2); and source citations for the two empirical networks in Fig. 6.</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>No data/code availability statement. For a thesis whose second half is entirely computational, a one-line pointer to a repository (or to an appendix listing the scripts) is worth a lot.</td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+
+<h2 id="toc_17">7. Suggested order of work</h2>
+
+<p><strong>Must fix (correctness):</strong>
+1. Recompute the Bethe–Peierls column with ρ(B) — §2.1
+2. Rename &quot;frustration&quot; → odd-ring/loop index, and rewrite the mechanism sentences — §2.2
+3. Restrict or requalify the &quot;frustration suppresses T_c&quot; claim to equal-⟨k⟩ pairs — §2.3
+4. Remove/replace the Molloy–Reed &quot;validation&quot; — §2.4
+5. Fix the MAC snapshot labels vs. curve — §2.5
+6. Restrict Eq. (72) to regular graphs or the normalised Laplacian — §2.6
+7. Fix the Cayley-tree boundary statement — §2.7
+8. Redo or remove the Fig. 6 power-law fits — §4.2
+9. Fix the Ising/Watts–Strogatz historical statements — §6.1, §6.2</p>
+
+<p><strong>Should fix (consistency and rigour):</strong>
+10. Boundary conditions and N in Chapter 5 (§3.2); τ<em>rel scaling direction (§3.3); the two percentage conventions (§3.4); pyrochlore &quot;exact&quot; (§3.5); <code>T_c^exact = ∞</code> (§3.6)
+11. Extend the BA temperature range so the T</em>c → ∞ claim is actually tested (§3.7)
+12. Soften µ ≈ 1.48 and compare with t ≈ 2.0 (§3.8)
+13. Add the &quot;Numerical methods&quot; subsection (§3.13)
+14. Notation collisions γ, H, λ/k (§5.1–5.3); walk vs. path (§5.4)
+15. Add the missing citations (§6.4)</p>
+
+<p><strong>Should add (completeness):</strong>
+16. Abstract (§1.1); update the roadmap to include Chapter 5 (§1.2); resolve the two undelivered promises — von Neumann entropy and spectral clustering (§1.3, §1.4); fix the broken cross-reference (§1.5); tone pass (§1.6); image credits (§1.7)</p>
+
+<hr>
+
+<h2 id="toc_18">8. What is working well (worth keeping as-is)</h2>
+
+<ul>
+<li>The <strong>analytical spine is correct</strong>. Eqs. (6)–(21), (23)–(29), (32)–(38), (39)–(65), (73)–(82), (83)–(88), (89)–(114), and Appendices A.1–A.3, A.5–A.8 all check out on re-derivation. A.7 in particular (the full Bethe–Peierls cluster calculation through to <code>2J/ln[k/(k−2)]</code>) is done carefully and completely, and the k = 2 → T_c = 0 consistency check is a nice touch.</li>
+<li>The <strong>reduction check</strong> that Eq. (113) collapses to Eq. (103) for a regular graph is exactly the kind of internal verification a thesis should contain — do more of it, and say so explicitly when you do.</li>
+<li>The <strong>Square vs. Kagomé comparison at fixed z = 4</strong> is genuinely instructive and is the cleanest physical result in Chapter 5. Same for <strong>Simple Cubic vs. Pyrochlore at z = 6</strong>. Build the chapter&#39;s narrative around these two controlled pairs.</li>
+<li><strong>Fig. 17</strong> (Dirichlet decay + Fiedler mode, four topologies) is the best figure in the thesis: the numbers are internally consistent (τ = 1/2λ₂ checks out to three digits in all four cases), and the pairing of the decay curve with the spatial slow-mode map makes the mechanism visible.</li>
+<li>Using <strong>real atomistic structures</strong> (MAC, a-Si, a-SiO₂) rather than only toy models is a genuine strength and distinguishes this from a standard textbook summary. Lean on it.</li>
+</ul>
+
+
+
+
+</body>
+
+</html>

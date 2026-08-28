@@ -1,0 +1,46 @@
+Ecco una selezione ragionata dei migliori network reali (con dati aperti e facilmente reperibili) che presentano coordinate fisiche note e dinamiche duali (fisiche vs. logico-sociali), suddivisi in base al $\lambda$ atteso:
+
+✈️ 1. Regime Bilanciato / Intermedio ($\lambda \approx 0.40 - 0.70$)
+Questi sono i sistemi più affascinanti per il tuo modello, perché fisica ed economia competono direttamente.
+
+A. Rete Globale dei Voli Aerei (OpenFlights / US Air Transportation Network)
+Dati: Nodi = aeroporti con coordinate geografiche (Latitudine, Longitudine); Pesi = numero di passeggeri o frequenza voli. (Dataset aperto su OpenFlights.org o Kaggle).
+Perché è perfetta: I voli a corto raggio seguono il costo del carburante e la vicinanza geografica ($e^{-d/r}$), ma gli hub globali (Londra, New York, Tokyo, Dubai) creano potenti cluster economici non spaziali a migliaia di km di distanza.
+Domanda scientifica: Quanto incide l'economia globale ($\lambda$) rispetto al puro costo della distanza geografica ($r$)?
+B. Rete del Commercio Internazionale (Bilateral Trade Network)
+Dati: Nodi = capitali mondiali (coordinate geografiche); Pesi = volume di import/export in miliardi di dollari (Dataset UN Comtrade / CEPII Gravity dataset).
+Perché è perfetta: È il classico "modello di gravità" dell'economia: la distanza fisica frena il commercio, ma alleanze storiche, trattati (es. UE, NAFTA) e affinità culturali creano alleanze economiche ("sociali").
+C. Rete delle Collaborazioni Scientifiche (Geolocalizzata)
+Dati: Nodi = università o istituti di ricerca con coordinate GPS; Pesi = numero di paper co-autoriati (Dati su OpenAlex / Scopus / arXiv).
+Perché è interessante: I ricercatori collaborano facilmente con colleghi dello stesso dipartimento/città (fisico), ma collaborano a livello mondiale con chi lavora sullo stesso specifico argomento di nicchia (spazio sociale tematico).
+⚡ 2. Regime a Dominanza Spaziale ($\lambda \approx 0.10 - 0.35$)
+Utile come controprova e calibrazione rispetto al caso del C. elegans.
+
+A. Reti Elettriche Nazionali (Power Grid - es. US Western Interconnection o Rete Europea)
+Dati: Nodi = centrali e sottostazioni con coordinate 2D; Archi = linee ad alta tensione con capacità/potenza (Dati su SciGRID / PyPSA).
+Perché studiarla: I cavi elettrici costano milioni al km: la topologia è quasi interamente vincolata dalla vicinanza fisica. Qui ci aspettiamo un $\lambda$ molto basso ($\lambda < 0.20$), fornendo il perfetto contrappeso al C. elegans.
+B. Reti di Mobilità Urbana e Traffico Pendolare (Commuting Networks / Census Mobility)
+Dati: Nodi = quartieri o comuni con baricentro GPS; Pesi = flusso giornaliero di pendolari (Dati ISTAT in Italia o US Census Bureau).
+Perché studiarla: La maggior parte degli spostamenti è a corto raggio (lavoro sotto casa), ma poli attrattivi (università, centri finanziari) creano flussi non puramente locali.
+🧠 3. Regime ad Alta Specificità Funzionale ($\lambda \approx 0.75 - 0.95$)
+Per approfondire il confronto con altri sistemi biologici e digitali.
+
+A. Connettoma Macro-scala Umano / Murino (Human Connectome Project - HCP / Allen Brain Atlas)
+Dati: Nodi = aree corticali e subcorticali (84 o 360 aree con coordinate 3D stereotassiche MNI); Pesi = densità delle fibre di sostanza bianca (trattografia MRI) o correlazione funzionale fMRI.
+Confronto con C. elegans: Nel C. elegans (micro-connettoma cellulare) abbiamo trovato $\lambda \approx 0.98$. A livello macroscopico (intere aree cerebrali del cervello umano), il vincolo di volume e spazio fisico $r$ pesa di più o di meno?
+B. Reti Sociali Geolocalizzate (Twitter / Reddit con coordinate GPS)
+Dati: Nodi = utenti geolocalizzati; Pesi = numero di menzioni, risposte o amicizie (SNAP Stanford datasets).
+Perché studiarla: Permette di quantificare l'omofilia digitale (affinità politica, hobby, lingua) rispetto alla vicinanza di quartiere/città.
+🏆 Il mio consiglio su cosa provare subito:
+Se vuoi vedere il modello esprimere al massimo la sua dualità, prova la Rete dei Voli Aerei (OpenFlights):
+
+È già pronta, pulita e ha coordinate reali in 2D (lat/lon).
+Mostrerà un $\lambda$ intermedio e interpretabile (es. $0.5 - 0.6$).
+Lo spazio sociale $\hat{S}$ ricostruito raggrupperà naturalmente gli hub aeroportuali mondiali per continente e importanza economica indipendentemente dalla loro distanza geografica!
+
+-------------
+FONTI DA AGGIUNGERE DOMANI
+* https://github.com/kipolovnikov/celegans_nonbacktracking
+* https://github.com/jpatokal/openflights/tree/master
+* https://gist.github.com/tadast/8827699#file-countries_codes_and_coordinates-csv
+- https://www.cepii.fr/CEPII/en/bdd_modele/bdd_modele_item.asp?id=8
